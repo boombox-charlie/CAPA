@@ -1,473 +1,360 @@
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:Georgia;
-	panose-1:2 4 5 2 5 4 5 2 3 3;}
-@font-face
-	{font-family:"Arial Narrow";
-	panose-1:2 11 6 6 2 2 2 3 2 4;}
-@font-face
-	{font-family:"Segoe UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:Aller;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.25in;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoTitle, li.MsoTitle, div.MsoTitle
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.25in;
-	text-align:center;
-	font-size:16.0pt;
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-size:12.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.25in;
-	text-align:justify;}
- /* Page Definitions */
- @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
-@page WordSection2
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection2
-	{page:WordSection2;}
- /* List Definitions */
- ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
---> 
-</style>
-
+	<!-- A template for showing a Corrective Action Custom Widget in Grist. -->
+	<!-- Uses Vue.js, moment, and the Grist Plugin API -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+	<script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<meta name=Generator content="Microsoft Word 15 (filtered)">
+	<style>
+	<!--
+	/* Font Definitions */
+	
+	@font-face {
+		font-family: "Cambria Math";
+		panose-1: 2 4 5 3 5 4 6 3 2 4;
+	}
+	
+	@font-face {
+		font-family: Calibri;
+		panose-1: 2 15 5 2 2 2 4 3 2 4;
+	}
+	
+	@font-face {
+		font-family: Georgia;
+		panose-1: 2 4 5 2 5 4 5 2 3 3;
+	}
+	
+	@font-face {
+		font-family: "Arial Narrow";
+		panose-1: 2 11 6 6 2 2 2 3 2 4;
+	}
+	
+	@font-face {
+		font-family: "Segoe UI";
+		panose-1: 2 11 5 2 4 2 4 2 2 3;
+	}
+	
+	@font-face {
+		font-family: Aller;
+		panose-1: 0 0 0 0 0 0 0 0 0 0;
+	}
+	/* Style Definitions */
+	
+	p.MsoNormal,
+	li.MsoNormal,
+	div.MsoNormal {
+		margin-top: 0in;
+		margin-right: 0in;
+		margin-bottom: 3.0pt;
+		margin-left: .25in;
+		text-align: justify;
+		font-size: 12.0pt;
+		font-family: "Calibri", sans-serif;
+	}
+	
+	p.MsoTitle,
+	li.MsoTitle,
+	div.MsoTitle {
+		margin-top: 12.0pt;
+		margin-right: 0in;
+		margin-bottom: 3.0pt;
+		margin-left: .25in;
+		text-align: center;
+		font-size: 16.0pt;
+		font-family: "Arial", sans-serif;
+		font-weight: bold;
+	}
+	
+	p.MsoLeft {
+	align:left; 
+	margin:0in;
+	text-align:left;
+	border:none
+	}
+	
+	.MsoChpDefault {
+		font-size: 12.0pt;
+		font-family: "Calibri", sans-serif;
+	}
+	
+	.MsoPapDefault {
+		margin-top: 0in;
+		margin-right: 0in;
+		margin-bottom: 3.0pt;
+		margin-left: .25in;
+		text-align: justify;
+	}
+	/* Page Definitions */
+	
+	@page WordSection1 {
+		size: 8.5in 11.0in;
+		margin: 1.0in 1.0in 1.0in 1.0in;
+	}
+	
+	div.WordSection1 {
+		page: WordSection1;
+	}
+	
+	@page WordSection2 {
+		size: 8.5in 11.0in;
+		margin: 1.0in 1.0in 1.0in 1.0in;
+	}
+	
+	div.WordSection2 {
+		page: WordSection2;
+	}
+	/* List Definitions */
+	
+	ol {
+		margin-bottom: 0in;
+	}
+	
+	ul {
+		margin-bottom: 0in;
+	}
+	
+	-->
+	</style>
 </head>
 
 <body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-
-<table class=2 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:
- collapse;border:none'>
- <tr style='height:28.35pt'>
-  <td width=623 colspan=2 style='width:467.5pt;border:solid black 1.0pt;
-  background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
-  <p class=MsoNormal align=center style='margin:0in;text-align:center;
-  border:none'><b><span style='font-size:14.0pt;color:black'>Corrective Action
-  Request</span></b></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Corrective Action Report Number:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt'>CAPA-35</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Issued to:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Date:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>The following Non-compliance has been
-  noted:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt'>improper handling and storage leading to use of
-  material out of rotation</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Reference Audit Report or Food Safety
+	<div class=WordSection1>
+		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+		<table class=2 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
+			<tr style='height:28.35pt'>
+				<td width=623 colspan=2 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
+					<p class=MsoNormal align=center style='margin:0in;text-align:center;border:none'><b>
+					<span style='font-size:14.0pt;color:black'>
+	  Corrective Action Request
+	  </span></b></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>
+	  Corrective Action Report Number:
+	  </span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt'>
+	  CAPA-35
+	  </span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Issued to:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Date:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>
+					The following Non-compliance has been noted:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top s tyle='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt'>
+					improper handling and storage leading to use of material out of rotation</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Reference Audit Report or Food Safety
   Quality System Area</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt'>&nbsp;Storage and Handling of Goods 11.6.1</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Risk Assessment      :</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>High / Medium / Low</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt'>M</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Corrective action required:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Person Responsible for corrective
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt'>&nbsp;Storage and Handling of Goods 11.6.1</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Risk Assessment      :</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>High / Medium / Low</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt'>M</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Corrective action required:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Person Responsible for corrective
   Action:</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Target Date to be completed by:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Details of Action taken:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Sign to confirm action completed:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>Date Completed:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:14.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-
-<table class=1 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:
- collapse;border:none'>
- <tr style='height:28.35pt'>
-  <td width=623 colspan=3 style='width:467.5pt;border:solid black 1.0pt;
-  background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
-  <p class=MsoNormal align=center style='margin:0in;text-align:center;
-  border:none'><b><span style='font-size:11.0pt;color:black'>Completed
-  Corrective Action Review</span></b></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Corrective Action Report Number:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Issued to:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Date:</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Results of Audit to confirm corrective
-  action is complete</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Results of Technical Manager review of
-  the effectiveness of the actions taken in eliminating or reducing the cause
-  of the non-conformance</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=156 rowspan=2 valign=top style='width:116.85pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Corrective Action Status Closed or
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Target Date to be completed by:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Details of Action taken:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Sign to confirm action completed:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>Date Completed:</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+		</table>
+		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+		<table class=1 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
+			<tr style='height:28.35pt'>
+				<td width=623 colspan=3 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
+					<p class=MsoNormal align=center style='margin:0in;text-align:center;border:none'><b><span style='font-size:11.0pt;color:black'>
+					Completed Corrective Action Review</span></b></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Corrective Action Report Number:</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Issued to:</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Date:</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>
+					Results of Audit to confirm correctiveaction is complete</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Results of Technical Manager review of
+  the effectiveness of the actions taken in eliminating or reducing the cause of the non-conformance</span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=156 rowspan=2 valign=top style='width:116.85pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Corrective Action Status Closed or
   Incomplete?</span></p>
-  </td>
-  <td width=156 valign=top style='width:116.9pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Closed</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Technical Manager Closes Out the
+				</td>
+				<td width=156 valign=top style='width:116.9pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Closed</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Technical Manager Closes Out the
   Corrective Action Below</span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=156 valign=top style='width:116.9pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Incomplete – </span></p>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>New Request Raised</span></p>
-  </td>
-  <td width=312 valign=top style='width:233.75pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-  style='font-size:11.0pt;color:black'>Enter New Corrective Action Request
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width=156 valign=top style='width:116.9pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Incomplete – </span></p>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>New Request Raised</span></p>
+				</td>
+				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+					<p class=MsoLeft><span style='font-size:11.0pt;color:black'>Enter New Corrective Action Request
   Number Here</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>* Corrective Action Request Closed / Corrective Action
+				</td>
+			</tr>
+		</table>
+		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+		<p class=MsoLeft><span style='color:black'>* Corrective Action Request Closed / Corrective Action
 incomplete New Corrective Action Request Number............ Raised</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>* Delete as applicable</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>&nbsp;</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>&nbsp;</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>Signed:            .....................................................
+		<p class=MsoLeft><span style='color:black'>* Delete as applicable</span></p>
+		<p class=MsoLeft><span style='color:black'>&nbsp;</span></p>
+		<p class=MsoLeft><span style='color:black'>&nbsp;</span></p>
+		<p class=MsoLeft><span style='color:black'>Signed:            .....................................................
 Technical Manager</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>&nbsp;</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='color:black'>Date:               ....................................</span></p>
-
-<p class=MsoNormal align=left style='margin:0in;text-align:left;border:none'><span
-style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-
-</div>
-
-<span style='font-size:12.0pt;font-family:"Times New Roman",serif'><br
+		<p class=MsoLeft><span style='color:black'>&nbsp;</span></p>
+		<p class=MsoLeft><span style='color:black'>Date:               ....................................</span></p>
+		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+	</div> <span style='font-size:12.0pt;font-family:"Times New Roman",serif'><br
 clear=all style='page-break-before:auto'>
 </span>
-
-<div class=WordSection2>
-
-<p class=MsoNormal style='text-indent:.25in'>&nbsp;</p>
-
-</div>
-
+	<div class=WordSection2>
+		<p class=MsoNormal style='text-indent:.25in'>&nbsp;</p>
+	</div>
 </body>
 
 </html>
