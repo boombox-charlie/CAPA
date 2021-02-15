@@ -147,20 +147,19 @@
 					<p class=MsoNormal align=center style='margin:0in;text-align:center;border:none'><b>
 					<span class=table>
 	  Corrective Action Request
-	  </span></b></p>
-				</td>
+	  </span></b></p></td>
 			</tr>
 			<tr>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>
-	  Corrective Action Report Number:
-	  </span></p>
+	  				Corrective Action Request Number:
+	 				</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
-	  CAPA-35
-	  </span></p>
+	  				CAPA-{{request.number}}
+	  				</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -169,7 +168,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{request.to}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -178,7 +177,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{request.date}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -192,16 +191,16 @@
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
-					improper handling and storage leading to use of material out of rotation</span></p>
+					{{request.non-conformance}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>Reference Audit Report or Food Safety
-  Quality System Area</span></p>
+  					Quality System Area</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span style='font-size:14.0pt'>&nbsp;Storage and Handling of Goods 11.6.1</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt'>{{request.reference}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -210,7 +209,7 @@
 					<p class=MsoLeft><span class=table>High / Medium / Low</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span style='font-size:14.0pt'>M</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt'>{{request.risk}}</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -222,7 +221,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{request.action}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -231,7 +230,7 @@
   Action:</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{request.responsible_party}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -240,7 +239,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{request.completeBy}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -252,7 +251,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{report.action}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -270,7 +269,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{report.completed}}&nbsp;</span></p>
 				</td>
 			</tr>
 		</table>
@@ -288,7 +287,7 @@
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{request.number}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -297,7 +296,7 @@
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{audit.Issued_to}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -306,7 +305,7 @@
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{audit.date}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -317,7 +316,7 @@
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{audit.complete}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -327,7 +326,7 @@
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{audit.effectiveness}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
