@@ -7,61 +7,52 @@ function ready(fn) {
 }
 
 const data = {
+  count: 0,
+  capa: {  
    "id":1,
    "References":{
       "Audit":{
          "Audit":{
-            "Audit":{
-               "tableId":"",
-               "rowId":1
-            },
-            "actions":"",
-            "completed":"",
-            "id":1,
-            "request":{
-               "tableId":"",
-               "rowId":1
-            }
+            "tableId":"Reports",
+            "rowId":1
          },
-         "actions":"",
-         "completed":"",
+         "actions":"recombobulated",
+         "completed":"1000-01-01T00:00:00.000Z",
          "id":1,
          "request":{
-            "Issued_to":{
-               "tableId":"People",
-               "rowId":2
-            },
-            "attachment":[
-               
-            ],
-            "date":null,
-            "id":1,
-            "nonconformance_noted":" "
+            "tableId":"Requests",
+            "rowId":1
          }
       },
-      "actions":" ",
-      "completed":" ",
+      "actions":"recombobulated",
+      "completed":"1000-01-01T00:00:00.000Z",
       "id":1,
       "request":{
          "Issued_to":{
-            "A":"Charlie",
-            "B":null,
-            "C":null,
-            "id":2
+            "tableId":"People",
+            "rowId":2
          },
-         "attachment":null,
+         "attachment":[
+            
+         ],
          "date":null,
          "id":1,
-         "nonconformance_noted":" "
+         "nonconformance_noted":"combobulator broken"
       }
    },
    "Audit":{
       "tableId":"Reports",
       "rowId":1
    },
-   "actions":" ",
-   "request":" ",
-   "completed":" "
+   "actions":"recombobulated",
+   "request":"combobulator broken",
+   "completed":"1000-01-01T00:00:00.000Z"
+
+  },
+  status: "waiting",
+  tableConnected: false,
+  rowConnected: false,
+  haveRows: false
 }
 let app = undefined;
 
