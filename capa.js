@@ -67,11 +67,5 @@ ready(function() {
     el: '#app',
     data: data
   });
-
-  if (document.location.search.includes('demo')) {
-    updateInvoice(exampleData);
-  }
-  if (document.location.search.includes('labels')) {
-    updateInvoice({});
-  }
 });
+
