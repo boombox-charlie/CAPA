@@ -7,43 +7,10 @@ function ready(fn) {
 }
 
 const data = {
-<<<<<<< HEAD
-  count: 0,
-  capa: {
-  
-=======
->>>>>>> main
    "id":1,
    "References":{
       "Audit":{
          "Audit":{
-<<<<<<< HEAD
-            "tableId":"Reports",
-            "rowId":1
-         },
-         "actions":"recombobulated",
-         "completed":"1000-01-01T00:00:00.000Z",
-         "id":1,
-         "request":{
-            "tableId":"Requests",
-            "rowId":1
-         }
-      },
-      "actions":"recombobulated",
-      "completed":"1000-01-01T00:00:00.000Z",
-      "id":1,
-      "request":{
-         "Issued_to":{
-            "tableId":"People",
-            "rowId":2
-         },
-         "attachment":[
-            
-         ],
-         "date":null,
-         "id":1,
-         "nonconformance_noted":"combobulator broken"
-=======
             "Audit":{
                "tableId":"",
                "rowId":1
@@ -86,28 +53,15 @@ const data = {
          "date":null,
          "id":1,
          "nonconformance_noted":" "
->>>>>>> main
       }
    },
    "Audit":{
       "tableId":"Reports",
       "rowId":1
    },
-<<<<<<< HEAD
-   "actions":"recombobulated",
-   "request":"combobulator broken",
-   "completed":"1000-01-01T00:00:00.000Z"
-
-  },
-  status: "waiting",
-  tableConnected: false,
-  rowConnected: false,
-  haveRows: false
-=======
    "actions":" ",
    "request":" ",
    "completed":" "
->>>>>>> main
 }
 let app = undefined;
 
