@@ -14,15 +14,12 @@ const data = {
 	"actions":"--",
 	"request":"--",
 	"completed":"1000-01-01T00:00:00.000Z",
-	"References":
-	{
+	"References":{
 		"Audit":null,
-		"actions":
-		"recombobulated",
+		"actions":"---",
 		"completed":"1000-01-01T00:00:00.000Z",
 		"id":"-",
-		"request":
-		{
+		"request":{
 			"Issued_to":{"tableId":"People","rowId":2},
 			"attachment":[],
 			"id":"- -",
