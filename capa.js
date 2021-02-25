@@ -39,7 +39,7 @@ function updateInvoice(row) {
       }
     }
 
-    data.invoice = Object.assign({}, data.invoice, row);
+    data.capa = Object.assign({}, data.capa, row);
 
     // Make invoice information available for debugging.
     window.capa = row;
@@ -75,7 +75,7 @@ ready(function() {
 
   app = new Vue({
     el: '#app',
-    data: {}}
+    data: data
   });
 });
 
