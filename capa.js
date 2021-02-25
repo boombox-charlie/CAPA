@@ -30,13 +30,13 @@ const data = {
   tableConnected: false,
   rowConnected: false,
   haveRows: false
-};
+}
 let app = undefined;
 
 function handleError(err) {
   console.error(err);
   const target = app || data;
-  target.capa = "";
+//  target.capa = "";
   target.status = String(err).replace(/^Error: /, "");
   console.log(data);
 }
