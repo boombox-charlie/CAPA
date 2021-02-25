@@ -37,29 +37,6 @@ const data = {
 };
 let app = undefined;
 
-{
-	"id":1,
-	"Audit":{"tableId":"Reports","rowId":0},
-	"actions":"--",
-	"request":"--",
-	"completed":"1000-01-01T00:00:00.000Z",
-	"References":
-	{
-		"Audit":null,
-		"actions":
-		"recombobulated",
-		"completed":"1000-01-01T00:00:00.000Z",
-		"id":"-",
-		"request":
-		{
-			"Issued_to":{"tableId":"People","rowId":2},
-			"attachment":[],
-			"id":"- -",
-			"nonconformance_noted":"--"
-		}
-	},
-}
-
 function handleError(err) {
   console.error(err);
   const target = app || data;
