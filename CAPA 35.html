@@ -141,6 +141,24 @@
 <body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
 
 	<div id="app" class=WordSection1>
+	<div class="status" v-if="status">
+        <template v-if="status === 'waiting'">
+          <p>Waiting for data...</p>
+          <ul>
+            <li v-bind:class="[tableConnected ? 'done' : '']">I need <b>read table</b> access.</li>
+            <li v-bind:class="[haveRows ? 'done' : '']">I need at least one row of data.</li>
+            <li v-bind:class="[rowConnected ? 'done' : '']">I need <b>Select By</b> set.</li>
+          </ul>
+          <p>Examples:</p>
+          <ul>
+            <li><a class="button" href="index.html?demo=1">A filled out invoice</a></li>
+            <li><a class="button" href="index.html?labels=1">A labelled invoice</a></li>
+          </ul>
+        </template>
+        <template v-else>
+          {{ status }}
+        </template>
+      </div>
 		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<table class=2 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
 			<tr style='height:28.35pt'>
