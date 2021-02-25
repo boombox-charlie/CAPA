@@ -10,7 +10,7 @@ const data = {
   count: 0,
   capa: {
     "id":1,
-    "Audit":{"tableId":"Reports","rowId":0},
+    "Audit":{"tableId":"Reports","rowId":0,date:""},
     "actions":"",
     "request":"",
     "completed":"1000-01-01T00:00:00.000Z",
