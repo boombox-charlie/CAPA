@@ -1,50 +1,49 @@
 function ready(fn) {
-  if (document.readyState !== 'loading'){
+  if (document.readyState !== "loading"){
     fn();
   } else {
-    document.addEventListener('DOMContentLoaded', fn);
+    document.addEventListener("DOMContentLoaded", fn);
   }
 }
 
 const data = {
   count: 0,
   capa: {
-	"id":1,
-	"Audit":{"tableId":"Reports","rowId":0},
-	"actions":"--",
-	"request":"--",
-	"completed":"1000-01-01T00:00:00.000Z",
-	"References":{
-		"Audit":null,
-		"actions":"---",
-		"completed":"1000-01-01T00:00:00.000Z",
-		"id":"-",
-		"request":{
-			"Issued_to":{"tableId":"People","rowId":2},
-			"attachment":[],
-			"id":"- -",
-			"nonconformance_noted":"--"
-		}
-	},
-	},
-  status: 'waiting',
+    "id":1,
+    "Audit":{"tableId":"Reports","rowId":0},
+    "actions":"",
+    "request":"",
+    "completed":"1000-01-01T00:00:00.000Z",
+    "References":{
+        "Audit":null,
+        "actions":"",
+        "completed":"1000-01-01T00:00:00.000Z",
+        "id":"-",
+        "request":{
+            "Issued_to":{"tableId":"People","rowId":2},
+            "attachment":[],
+            "id":"- -",
+            "nonconformance_noted":"--"}
+         },a
+    },
+  status: "waiting",
   tableConnected: false,
   rowConnected: false,
-  haveRows: false,
+  haveRows: false
 };
 let app = undefined;
 
 function handleError(err) {
   console.error(err);
   const target = app || data;
-  target.capa = '';
-  target.status = String(err).replace(/^Error: /, '');
+  target.capa = "";
+  target.status = String(err).replace(/^Error: /, "");
   console.log(data);
 }
 
 function updateInvoice(row) {
   try {
-    data.status = '';
+    data.status = "";
     if (row === null) {
       throw new Error("(No data - not on row - please add or select a row)");
     }
@@ -53,7 +52,7 @@ function updateInvoice(row) {
       try {
         Object.assign(row, row.References);
       } catch (err) {
-        throw new Error('Could not understand References column. ' + err);
+        throw new Error("Could not understand References column. " + err);
       }
     }
 
@@ -72,7 +71,7 @@ ready(function() {
   grist.onRecord(updateInvoice);
 
   // Monitor status so we can give user advice.
-  grist.on('message', msg => {
+  grist.on("message", msg => {
     // If we are told about a table but not which row to access, check the
     // number of rows.  Currently if the table is empty, and "select by" is
     // not set, onRecord() will never be called.
@@ -92,7 +91,7 @@ ready(function() {
   };
 
   app = new Vue({
-    el: '#app',
+    el: "#app",
     data: data
   });
 });
