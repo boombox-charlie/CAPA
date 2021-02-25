@@ -9,24 +9,47 @@ function ready(fn) {
 const data = {
   count: 0,
   capa: {
-    "id":1,
-    "Audit":{"tableId":"Reports","rowId":0,date:""},
-    "actions":"",
-    "request":"",
-    "completed":"1000-01-01T00:00:00.000Z",
-    "References":{
-        "Audit":null,
-        "actions":"",
-        "completed":"1000-01-01T00:00:00.000Z",
-        "id":"-",
-        "request":{
-            "Issued_to":{"tableId":"People","rowId":2},
-            "attachment":[],
-            "date":"",
-            "id":"- -",
-            "nonconformance_noted":"--"}
+  
+   "id":1,
+   "References":{
+      "Audit":{
+         "Audit":{
+            "tableId":"Reports",
+            "rowId":1
          },
-    },
+         "actions":"recombobulated",
+         "completed":"1000-01-01T00:00:00.000Z",
+         "id":1,
+         "request":{
+            "tableId":"Requests",
+            "rowId":1
+         }
+      },
+      "actions":"recombobulated",
+      "completed":"1000-01-01T00:00:00.000Z",
+      "id":1,
+      "request":{
+         "Issued_to":{
+            "tableId":"People",
+            "rowId":2
+         },
+         "attachment":[
+            
+         ],
+         "date":null,
+         "id":1,
+         "nonconformance_noted":"combobulator broken"
+      }
+   },
+   "Audit":{
+      "tableId":"Reports",
+      "rowId":1
+   },
+   "actions":"recombobulated",
+   "request":"combobulator broken",
+   "completed":"1000-01-01T00:00:00.000Z"
+
+  },
   status: "waiting",
   tableConnected: false,
   rowConnected: false,
