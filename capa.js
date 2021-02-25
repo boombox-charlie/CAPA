@@ -24,7 +24,7 @@ const data = {
             "attachment":[],
             "id":"- -",
             "nonconformance_noted":"--"}
-         },a
+         },
     },
   status: "waiting",
   tableConnected: false,
