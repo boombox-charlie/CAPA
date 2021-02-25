@@ -7,30 +7,61 @@ function ready(fn) {
 }
 
 const data = {
-  count: 0,
-  capa: {
-    "id":1,
-    "Audit":{"tableId":"Reports","rowId":0,date:""},
-    "actions":"",
-    "request":"",
-    "completed":"1000-01-01T00:00:00.000Z",
-    "References":{
-        "Audit":null,
-        "actions":"",
-        "completed":"1000-01-01T00:00:00.000Z",
-        "id":"-",
-        "request":{
-            "Issued_to":{"tableId":"People","rowId":2},
-            "attachment":[],
-            "date":"",
-            "id":"- -",
-            "nonconformance_noted":"--"}
+   "id":1,
+   "References":{
+      "Audit":{
+         "Audit":{
+            "Audit":{
+               "tableId":"",
+               "rowId":1
+            },
+            "actions":"",
+            "completed":"",
+            "id":1,
+            "request":{
+               "tableId":"",
+               "rowId":1
+            }
          },
-    },
-  status: "waiting",
-  tableConnected: false,
-  rowConnected: false,
-  haveRows: false
+         "actions":"",
+         "completed":"",
+         "id":1,
+         "request":{
+            "Issued_to":{
+               "tableId":"People",
+               "rowId":2
+            },
+            "attachment":[
+               
+            ],
+            "date":null,
+            "id":1,
+            "nonconformance_noted":" "
+         }
+      },
+      "actions":" ",
+      "completed":" ",
+      "id":1,
+      "request":{
+         "Issued_to":{
+            "A":"Charlie",
+            "B":null,
+            "C":null,
+            "id":2
+         },
+         "attachment":null,
+         "date":null,
+         "id":1,
+         "nonconformance_noted":" "
+      }
+   },
+   "Audit":{
+      "tableId":"Reports",
+      "rowId":1
+   },
+   "actions":" ",
+   "request":" ",
+   "completed":" "
 }
 let app = undefined;
 
