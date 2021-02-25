@@ -6,10 +6,20 @@ function ready(fn) {
   }
 }
 
+const data = {
+  count: 0,
+  capa: '',
+  status: 'waiting',
+  tableConnected: false,
+  rowConnected: false,
+  haveRows: false,
+};
+let app = undefined;
+
 function handleError(err) {
   console.error(err);
   const target = app || data;
-//  target.invoice = '';
+  target.capa = '';
   target.status = String(err).replace(/^Error: /, '');
   console.log(data);
 }
@@ -32,7 +42,7 @@ function updateInvoice(row) {
     data.invoice = Object.assign({}, data.invoice, row);
 
     // Make invoice information available for debugging.
-    window.invoice = row;
+    window.capa = row;
   } catch (err) {
     handleError(err);
   }
