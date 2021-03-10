@@ -42,8 +42,8 @@
 				<td width=623 colspan=2 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
 					<p class=MsoNormal align=center style='margin:0in;text-align:center;border:none'><b>
 					<span class=table>
-	  Corrective Action Request
-	  </span></b></p></td>
+	  				Corrective Action Request
+	  				</span></b></p></td>
 			</tr>
 			<tr>
 				<td width=312 valign=top  class=subtitle>
@@ -52,7 +52,7 @@
 	 				</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
 	  				CAPA-{{capa.id}}
 	  				</span></p>
@@ -63,7 +63,7 @@
 					<p class=MsoLeft><span class=table>Issued to:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.request_to}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -72,7 +72,7 @@
 					<p class=MsoLeft><span class=table>Date:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.request_date}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -85,27 +85,37 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
 					{{capa.request_nonconf}}&nbsp;</span></p>
 				</td>
-			</tr>
+			</tr><!--noted non-conformances-->
 			<tr>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>Reference Audit Report or Food Safety
   					Quality System Area</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.request_ref}}&nbsp;</span></p>
 				</td>
-			</tr>
+			</tr><!--code reference -->
 			<tr>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>Risk Assessment      :</span></p>
 					<p class=MsoLeft><span class=table>High / Medium / Low</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.request_risk}}</span></p>
+				</td>
+			</tr><!--risk assessment-->
+			<tr>
+				<td width=312 valign=top  class=subtitle>
+					<p class=MsoLeft><span class=table>Root Cause Analysis:</span></p>
+					&nbsp;
+					&nbsp;
+				</td>
+				<td width=312 valign=top  class=subtitle>
+					<p class=MsoLeft><span class=table>{{capa.report_rca}}</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -116,16 +126,16 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>&nbsp;</span></p>
+				<td width=312 valign=top  class=subtitle>
+					<p class=MsoLeft><span class=table>{{capa.report_act_required}}</span></p>
 				</td>
-			</tr>
+			</tr><!--Actions Required-->
 			<tr>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>Person Responsible for corrective
 actions
 						</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.request_assigned_to}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -134,7 +144,7 @@ actions
 					<p class=MsoLeft><span class=table>Target Date to be completed by:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.report_target_date}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -146,7 +156,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.report_action_taken}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -155,7 +165,7 @@ actions
 					<p class=MsoLeft><span class=table>Sign to confirm action completed:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 			</tr>
@@ -164,7 +174,7 @@ actions
 					<p class=MsoLeft><span class=table>Date Completed:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.report_completed_date}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -182,7 +192,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>Corrective Action Report Number:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>{{capa.id}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -191,7 +201,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>Issued to:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>{{capa.audit_assigned}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -200,7 +210,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>Date:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>{{capa.audit_date}}&nbsp;</span></p>
 				</td>
 			</tr>
@@ -211,31 +221,29 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>{{capa.audit_results}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
 				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>Results of Technical Manager review of
-  the effectiveness of the actions taken in eliminating or reducing the cause of the non-conformance</span></p>
+					<p class=MsoLeft><span class=tableSmall>
+					Results of Technical Manager review of the effectiveness of the actions taken in eliminating or reducing the cause of the non-conformance</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>{{capa.audit_effectiveness}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
 				<td width=156 rowspan=2 valign=top style='width:116.85pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>Corrective Action Status Closed or
-  Incomplete?</span></p>
+					<p class=MsoLeft><span class=tableSmall>Corrective Action Status Closed or Incomplete?</span></p>
 				</td>
 				<td width=156 valign=top style='width:116.9pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
 					<p class=MsoLeft><span class=tableSmall>Closed</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>Technical Manager Closes Out the
-  Corrective Action Below</span></p>
+				<td width=312 valign=top  class=subtitle>
+					<p class=MsoLeft><span class=tableSmall>Technical Manager Closes Out the Corrective Action Below</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 			</tr>
@@ -244,9 +252,8 @@ actions
 					<p class=MsoLeft><span class=tableSmall>Incomplete – </span></p>
 					<p class=MsoLeft><span class=tableSmall>New Request Raised</span></p>
 				</td>
-				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>Enter New Corrective Action Request
-  Number Here</span></p>
+				<td width=312 valign=top  class=subtitle>
+					<p class=MsoLeft><span class=tableSmall>Enter New Corrective Action Request Number Here</span></p>
 				</td>
 			</tr>
 		</table>
