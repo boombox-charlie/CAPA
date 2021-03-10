@@ -64,7 +64,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>{{capa.References.request.Issued_to}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.request_to}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -73,7 +73,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>{{capa.References.request.date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.request_date}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -87,7 +87,7 @@
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
-					{{capa.References.request.nonconformance}}&nbsp;</span></p>
+					{{capa.request_nonconf}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -96,7 +96,7 @@
   					Quality System Area</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.References.request.reference}}&nbsp;</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.request_ref}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -105,12 +105,12 @@
 					<p class=MsoLeft><span class=table>High / Medium / Low</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.References.request.risk}}</span></p>
+					<p class=MsoLeft><span style='font-size:14.0pt'>{{capa.request_risk}}</span></p>
 				</td>
 			</tr>
 			<tr>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=table>Corrective action required:</span></p>
+					<p class=MsoLeft><span class=table>Corrective and Preventive actions required:</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
@@ -126,7 +126,7 @@
 actions
 						</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>{{capa.References.request.responsible_party}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.request_assigned_to}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -135,7 +135,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>{{capa.References.request.completeBy}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.report_target_date}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -147,7 +147,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>report actions&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.report_action_taken}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -165,7 +165,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=table>{{capa.References.completed}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.report_completed_date}}&nbsp;</span></p>
 				</td>
 			</tr>
 		</table>
@@ -183,7 +183,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>{{capa.References.request.number}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.id}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -192,7 +192,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>{{capa.References.request.Issued_to}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.audit_assigned}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -201,7 +201,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>{{capa.Audit.date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.audit_date}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -212,7 +212,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>{{capa.References.Audit.completed}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.audit_results}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -222,7 +222,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top style='width:233.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-					<p class=MsoLeft><span class=tableSmall>{{capa.References.Audit.effectiveness}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.audit_effectiveness}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>

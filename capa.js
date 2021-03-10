@@ -7,53 +7,23 @@ function ready(fn) {
 }
 
 const data = {
-  count: 0,
-  capa: {  
-   "id":1,
-   "References":{
-      "Audit":{
-         "Audit":{
-            "tableId":"Reports",
-            "rowId":1
-         },
-         "actions":"recombobulated",
-         "completed":"1000-01-01T00:00:00.000Z",
-         "id":1,
-         "request":{
-            "tableId":"Requests",
-            "rowId":1
-         }
-      },
-      "actions":"recombobulated",
-      "completed":"1000-01-01T00:00:00.000Z",
-      "id":1,
-      "request":{
-         "Issued_to":{
-            "tableId":"People",
-            "rowId":2
-         },
-         "attachment":[
-            
-         ],
-         "date":null,
-         "id":1,
-         "nonconformance_noted":"combobulator broken"
-      }
-   },
-   "Audit":{
-      "tableId":"Reports",
-      "rowId":1
-   },
-   "actions":"recombobulated",
-   "request":"combobulator broken",
-   "completed":"1000-01-01T00:00:00.000Z"
-
-  },
-  status: "waiting",
-  tableConnected: false,
-  rowConnected: false,
-  haveRows: false
+   "id":"",
+   "request_to":"a",
+   "request_date":"b",
+   "request_ref":"d",
+   "request_nonconf":"c",
+   "request_risk":"e",
+   "report_act_required":"g",
+   "report_assigned_to":"h",
+   "report_target_date":"i",
+   "report_action_taken":"j",
+   "report_completed_date":"k",
+   "audit_assigned":"l",
+   "audit_date":"m",
+   "audit_results":"n",
+   "audit_effectiveness":"o"
 }
+
 let app = undefined;
 
 function handleError(err) {
@@ -87,6 +57,15 @@ function updateInvoice(row) {
     handleError(err);
   }
 }
+
+Vue.filter('asDate', function(value) {
+  if (typeof(value) === 'number') {
+    value = new Date(value * 1000);
+  }
+  const date = moment.utc(value)
+  return date.isValid() ? date.format('MMMM DD, YYYY') : value;
+});
+
 
 ready(function() {
   // Update the invoice anytime the document data changes.
