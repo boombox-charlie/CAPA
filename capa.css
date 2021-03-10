@@ -73,11 +73,19 @@
 		color:black
 	}
 	
+	table.sectionhead {
+		width:467.5pt;
+		border:solid black 1.0pt;
+		background:#D0CECE;
+		padding:0in 5.4pt 0in 5.4pt;
+		height:28.35pt
+	}
+	
 	td.subtitle {
 		width:	233.75pt;
 		border:	solid black 1.0pt;
 		border-top:none;
-		padding:0in 5.4pt 0in 5.4pt>
+		padding:0in 5.4pt 0in 5.4pt
 
 	}
 	

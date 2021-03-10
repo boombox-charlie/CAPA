@@ -39,11 +39,12 @@
 		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<table class=2 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
 			<tr style='height:28.35pt'>
-				<td width=623 colspan=2 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
+				<td width=623 colspan=2 class=sectionhead>
 					<p class=MsoNormal align=center style='margin:0in;text-align:center;border:none'><b>
 					<span class=table>
 	  				Corrective Action Request
-	  				</span></b></p></td>
+	  				</span></b></p>
+	  			</td>
 			</tr>
 			<tr>
 				<td width=312 valign=top  class=subtitle>
@@ -180,6 +181,7 @@
 			</tr>
 		</table>
 		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+		<span v-if="capa.report_completed_date!=''">
 		<table class=1 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
 			<tr style='height:28.35pt'>
 				<td width=623 colspan=3 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
@@ -188,16 +190,16 @@
 				</td>
 			</tr>
 			<tr>
-				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 colspan=2 valign=top class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>Corrective Action Report Number:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=tableSmall>{{capa.id}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.capa_}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
-				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 colspan=2 valign=top class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>Issued to:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
@@ -206,7 +208,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 colspan=2 valign=top class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>Date:</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
@@ -215,7 +217,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 colspan=2 valign=top class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>
 					Results of Audit to confirm corrective action is complete</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
@@ -226,7 +228,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width=312 colspan=2 valign=top style='width:233.75pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+				<td width=312 colspan=2 valign=top class=subtitle>
 					<p class=MsoLeft><span class=tableSmall>
 					Results of Technical Manager review of the effectiveness of the actions taken in eliminating or reducing the cause of the non-conformance</span></p>
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
@@ -257,6 +259,7 @@
 				</td>
 			</tr>
 		</table>
+		</span>
 		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<p class=MsoLeft><span style='color:black'>* Corrective Action Request Closed / Corrective Action
