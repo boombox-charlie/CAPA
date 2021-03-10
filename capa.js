@@ -7,6 +7,7 @@ function ready(fn) {
 }
 
 const data = {
+   capa :{
    "id":"",
    "request_to":"a",
    "request_date":"b",
@@ -22,6 +23,7 @@ const data = {
    "audit_date":"m",
    "audit_results":"n",
    "audit_effectiveness":"o"
+   }
 }
 
 let app = undefined;
