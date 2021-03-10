@@ -9,7 +9,7 @@ function ready(fn) {
 const data = {
    capa :{
    "id":"",
-   "capa_":"#"
+   "capa_":"#",
    "request_to":"a",
    "request_date":"b",
    "request_ref":"d",
