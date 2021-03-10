@@ -54,7 +54,7 @@
 				</td>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span style='font-size:14.0pt'>
-	  				CAPA-{{capa.id}}
+	  				CAPA-{{capa.capa_}}
 	  				</span></p>
 				</td>
 			</tr>
@@ -73,7 +73,7 @@
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=table>{{capa.request_date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.request_date | asDate}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -132,9 +132,9 @@
 			</tr><!--Actions Required-->
 			<tr>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=table>Person Responsible for corrective
-actions
-						</td>
+					<p class=MsoLeft><span class=table>
+					Person Responsible for corrective actions
+				</td>
 				<td width=312 valign=top  class=subtitle>
 					<p class=MsoLeft><span class=table>{{capa.request_assigned_to}}&nbsp;</span></p>
 				</td>
@@ -145,7 +145,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=table>{{capa.report_target_date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.report_target_date | asDate}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
@@ -175,7 +175,7 @@ actions
 					<p class=MsoLeft><span class=table>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=table>{{capa.report_completed_date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=table>{{capa.report_completed_date | asDate}}&nbsp;</span></p>
 				</td>
 			</tr>
 		</table>
@@ -211,7 +211,7 @@ actions
 					<p class=MsoLeft><span class=tableSmall>&nbsp;</span></p>
 				</td>
 				<td width=312 valign=top  class=subtitle>
-					<p class=MsoLeft><span class=tableSmall>{{capa.audit_date}}&nbsp;</span></p>
+					<p class=MsoLeft><span class=tableSmall>{{capa.audit_date | asDate}}&nbsp;</span></p>
 				</td>
 			</tr>
 			<tr>
