@@ -180,7 +180,7 @@
 			</tr>
 		</table>
 		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
-		<span v-if="capa.report_completed_date">
+		<span v-if="capa.report_completed_date"><!--hide audit section if actions not complete-->
 		<table class=1 border=1 cellspacing=0 cellpadding=0 width=623 style='border-collapse:collapse;border:none'>
 			<tr style='height:28.35pt'>
 				<td width=623 colspan=3 style='width:467.5pt;border:solid black 1.0pt;background:#D0CECE;padding:0in 5.4pt 0in 5.4pt;height:28.35pt'>
@@ -258,7 +258,7 @@
 				</td>
 			</tr>
 		</table>
-		</span>
+
 		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<p class=MsoLeft><span style='font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 		<p class=MsoLeft><span style='color:black'>* Corrective Action Request Closed / Corrective Action
@@ -272,8 +272,7 @@ Technical Manager</span></p>
 		<p class=MsoLeft><span style='color:black'>Date:               ....................................</span></p>
 		<p class=MsoLeft><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
 	</div> 
-	<span style='font-size:12.0pt;font-family:"Times New Roman",serif'><br clear=all style='page-break-before:auto'>
-	</span>
+	</span><!--end hiding of audit section-->
 </div>
 </body>
 
